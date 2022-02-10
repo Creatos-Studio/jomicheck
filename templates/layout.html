@@ -9,29 +9,25 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="stylesheet" href="{% static '/css/simple-datatables.css' %}" />
-    <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
-    <script src="{% static '/js/font-awesome.js' %}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/simple-datatables.css')}}" />
+    <link href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/font-awesome.js')}}"></script>
     <title>Dashboard - Title pending...</title>
   </head>
   <body class="sb-nav-fixed">
-    {% block partials/_navbar %}{% endblock %}
-
+{% include '/partials/navbar.html' %}
     <div id="layoutSidenav">
       <div id="layoutSidenav_content">
-        {% block partials/_sidenav %}{% endblock %}
-
+{% include '/partials/sidenav.html' %}
         <main>
           <div class="container-fluid px-4">
-            {% block content %}{% endblock %}
           </div>
         </main>
-
-        {% block partials/_footer %}{% endblock %}
+{% include '/partials/footer.html' %}
       </div>
     </div>
-    <script src="{% static '/js/bootstrap.min.js' %}"></script>
-    <script src="{% static '/js/Chart.js' %}"></script>
-    <script src="{% static '/js/simple-datatables.js' %}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/Chart.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/simple-datatables.js')}}"></script>
   </body>
 </html>
