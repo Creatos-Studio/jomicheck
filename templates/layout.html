@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="{% static '/css/simple-datatables.css' %}" />
+    <link href="{% static '/css/styles.css' %}" rel="stylesheet" />
+    <script src="{% static '/js/font-awesome.js' %}"></script>
+    <title>Dashboard - Title pending...</title>
+  </head>
+  <body class="sb-nav-fixed">
+    {% block partials/_navbar %}{% endblock %}
+
+    <div id="layoutSidenav">
+      <div id="layoutSidenav_content">
+        {% block partials/_sidenav %}{% endblock %}
+
+        <main>
+          <div class="container-fluid px-4">
+            {% block content %}{% endblock %}
+          </div>
+        </main>
+
+        {% block partials/_footer %}{% endblock %}
+      </div>
+    </div>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/Chart.js' %}"></script>
+    <script src="{% static '/js/simple-datatables.js' %}"></script>
+  </body>
+</html>
