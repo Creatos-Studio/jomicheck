@@ -10,7 +10,9 @@ def create_app():
 
     app = Flask(__name__)
     app.config.from_object('config.DevelopmentConfig')
+
     database.init_app(app)
+
     app.register_blueprint(users)
     app.register_blueprint(passwords)
 

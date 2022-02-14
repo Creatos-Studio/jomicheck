@@ -6,7 +6,7 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     # SECRET_KEY = 'kjñlasdflkjñkjfsldña'
-    ALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class ProductionConfig(Config):
@@ -20,3 +20,4 @@ class DevelopmentConfig(Config):
     DEBUG = True
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
     SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://lalo:password@localhost:3306/jomicheck'
+    # SQLALCHEMY_DATABASE_URI = 'mysql://lalo:password@localhost:3306/jomicheck'
